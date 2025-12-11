@@ -8,10 +8,6 @@ This project was created to practice **Compound Component architecture** and imp
 [ Let's Try in Live :)](https://gmarav05.github.io/banner-component/)
 
 ## Image
-![](./screenshot.png)
-
-# 
-
 
 ![](./image.png)
 
