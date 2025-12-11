@@ -1,6 +1,6 @@
 import Banner from "./Banner"
 
-function App() {
+export default function App() {
    const bannerContents = [
     {
       status: "success",
@@ -41,19 +41,18 @@ function App() {
   ]
 
   const banners = bannerContents.map((banner, index) => {
-    <Banner key={index} title={banner.title} status={banner.status}>
-      {banner.text}
-    </Banner>
+     return (<Banner key={index} title={banner.title} status={banner.status}>
+            {banner.text}
+            </Banner>
+     )
   })
 
   return (
     <>
-      <section>
+      <main className="font-inter overflow-x-hidden">
           <h2 className="text-2xl font-semibold mb-4">Banners</h2>
           <div className="flex flex-col gap-4">{banners}</div>
-      </section>
+       </main>   
     </>
   )
 }
-
-export default App

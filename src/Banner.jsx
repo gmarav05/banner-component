@@ -22,22 +22,14 @@ export default function Banner({children, status, title}) {
     const icon= ICONS[status]
 
     return (
-        <>
-            <div 
-            className={`w-full md:max-w-5xl px-4 py-3 flex gap-3 rounded-lg ${color}`}
-            >
-                <div className="shrink-0 flex items-center h-6">
-                    {icon}
-                </div>
-
-                <div class="flex flex-col gap-1">
-                    {title && <div className="font-semibold">{title}</div>}
-                    {children}
-                 </div>
-
-            </div>
-
-
-        </>
-    )
+    <div
+      className={`w-full md:max-w-5xl px-4 py-3 flex gap-3 rounded-lg ${color}`}
+    >
+      <div className="shrink-0 flex items-center h-6">{icon}</div>
+      <div className="flex flex-col gap-1">
+        {title && <div className="font-semibold">{title}</div>}
+        {children}
+      </div>
+    </div>
+  );
 }
